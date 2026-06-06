@@ -32,15 +32,15 @@ m <- lm(data$Marks~data$number_courses+data$time_study)
 m
 m <- lm(Marks~number_courses+time_study, data=data)
 m
-coefficients(m) # model coefficients
-coef(m) # same as coefficients()
+coefficients(m) 
+coef(m) 
 summary(m)
 
 anova(m)
 confint(m, level=0.94)
 
-resid(m) # model residuals
-residuals(m) # same as resid()
+resid(m) 
+residuals(m) 
 par(mfrow=c(2,2)) 
 plot(fitted(m), resid(m), axes=TRUE, 
      frame.plot=TRUE, xlab='fitted values', 
